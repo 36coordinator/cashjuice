@@ -7,7 +7,7 @@
   <meta name="description" content="Join CashJuice free. 50,000+ digital marketers. Earn via referral commissions (up to 40%), ClikPost recurring pay, ad revenue share &amp; VIP bonuses across 15 tiers. No fees to join." />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Independent CashJuice Affiliate" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#0c0d0b" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -102,18 +102,25 @@
   </script>
   <style>
     :root {
-      --bg: #0b1220;
-      --bg-card: #121a2b;
-      --bg-card-hover: #182238;
-      --text: #e8eef9;
-      --text-muted: #94a3b8;
-      --accent: #22c55e;
-      --accent-dark: #16a34a;
-      --accent-soft: rgba(34, 197, 94, 0.12);
-      --vip: #f59e0b;
-      --vip-soft: rgba(245, 158, 11, 0.12);
-      --border: rgba(148, 163, 184, 0.15);
-      --gradient: linear-gradient(135deg, #22c55e 0%, #14b8a6 100%);
+      --bg: #0c0d0b;
+      --raised: #1d1f1a;
+      --line: #2a2b26;
+      --fg: #ecece4;
+      --muted: #9a9b90;
+      --accent: #c5d46a;
+      --accent-hover: #d3e07c;
+      --accent-fg: #12140c;
+      --accent-soft: color-mix(in oklab, var(--accent) 14%, transparent);
+      --signal: #d4a574;
+      --vip: var(--signal);
+      --vip-soft: color-mix(in oklab, var(--signal) 16%, transparent);
+      --bg-card: var(--raised);
+      --bg-card-hover: #262822;
+      --text: var(--fg);
+      --text-muted: var(--muted);
+      --accent-dark: var(--accent-hover);
+      --border: var(--line);
+      --gradient: var(--accent);
       --shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.45);
     }
 
@@ -128,7 +135,7 @@
     }
 
     body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Source Sans 3', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -150,7 +157,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11, 18, 32, 0.85);
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
@@ -179,7 +186,7 @@
       align-items: center;
       gap: 0.4rem;
       background: var(--gradient);
-      color: #04110a;
+      color: var(--accent-fg);
       font-weight: 700;
       font-size: 0.9rem;
       padding: 0.65rem 1.25rem;
@@ -189,7 +196,8 @@
 
     .nav-cta:hover {
       transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
+      background: var(--accent-hover);
+      box-shadow: 0 8px 20px color-mix(in oklab, var(--accent) 28%, transparent);
     }
 
     /* ===== HERO ===== */
@@ -205,8 +213,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 197, 94, 0.18), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 50%, rgba(20, 184, 166, 0.08), transparent);
+        radial-gradient(ellipse 80% 50% at 50% -20%, color-mix(in oklab, var(--accent) 18%, transparent), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 50%, color-mix(in oklab, var(--accent) 8%, transparent), transparent);
       pointer-events: none;
     }
 
@@ -216,12 +224,13 @@
       gap: 0.45rem;
       background: var(--accent-soft);
       color: var(--accent);
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
       font-size: 0.8rem;
       font-weight: 600;
       padding: 0.4rem 0.9rem;
       border-radius: 999px;
       margin-bottom: 1.5rem;
-      border: 1px solid rgba(34, 197, 94, 0.25);
+      border: 1px solid color-mix(in oklab, var(--accent) 28%, transparent);
     }
 
     .badge::before {
@@ -233,10 +242,15 @@
       box-shadow: 0 0 8px var(--accent);
     }
 
+    h1, h2, h3 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 500;
+    }
+
     h1 {
       font-size: clamp(2.4rem, 5.5vw, 3.75rem);
-      font-weight: 800;
-      letter-spacing: -0.04em;
+      font-weight: 500;
+      letter-spacing: -0.03em;
       line-height: 1.1;
       margin-bottom: 1rem;
       max-width: 16ch;
@@ -272,7 +286,7 @@
       justify-content: center;
       gap: 0.5rem;
       background: var(--gradient);
-      color: #04110a;
+      color: var(--accent-fg);
       font-weight: 700;
       font-size: 1.05rem;
       padding: 0.95rem 1.9rem;
@@ -284,7 +298,8 @@
 
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(34, 197, 94, 0.4);
+      background: var(--accent-hover);
+      box-shadow: 0 12px 28px color-mix(in oklab, var(--accent) 28%, transparent);
     }
 
     .btn-secondary {
@@ -303,7 +318,7 @@
 
     .btn-secondary:hover {
       background: var(--bg-card);
-      border-color: rgba(148, 163, 184, 0.35);
+      border-color: var(--fg);
     }
 
     .trust-line {
@@ -345,16 +360,15 @@
     }
 
     .stat-num {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
       font-size: 1.6rem;
-      font-weight: 800;
+      font-weight: 500;
       letter-spacing: -0.03em;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: var(--accent);
     }
 
     .stat-label {
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
       font-size: 0.8rem;
       color: var(--text-muted);
       margin-top: 0.15rem;
@@ -367,8 +381,9 @@
 
     .section-label {
       display: inline-block;
+      font-family: "IBM Plex Mono", ui-monospace, monospace;
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--accent);
@@ -376,8 +391,9 @@
     }
 
     h2 {
+      font-family: Fraunces, Georgia, serif;
       font-size: clamp(1.75rem, 3.5vw, 2.35rem);
-      font-weight: 800;
+      font-weight: 500;
       letter-spacing: -0.03em;
       line-height: 1.2;
       margin-bottom: 1rem;
@@ -947,6 +963,8 @@
       </p>
       <p class="footer-links">
         Official site: <a href="https://cashjuice.com" target="_blank" rel="noopener">cashjuice.com</a>
+        · <a href="https://clikpost.affiliatesalmanac.com/">ClikPost briefing</a>
+        · <a href="https://clikpost.affiliatesalmanac.com/highlevel">HighLevel briefing</a>
       </p>
     </div>
   </footer>

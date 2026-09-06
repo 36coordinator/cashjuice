@@ -7,7 +7,7 @@
   <meta name="description" content="Independent CashJuice review. Join free — 50,000+ digital marketers. Earn with referral commissions up to 40%, ClikPost recurring pay, ad revenue share and VIP bonuses across 15 tiers. No fees." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Affiliates Almanac" />
-  <meta name="theme-color" content="#0c0d10" />
+  <meta name="theme-color" content="#0c0d0b" />
   <link rel="canonical" href="https://affiliatesalmanac.com/video.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="favicon.png" />
@@ -21,23 +21,27 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #0c0d10;
-      --surface: #15161b;
-      --fg: #f3f1ec;
-      --muted: #9a9aa3;
-      --subtle: #6e6e78;
-      --accent: #3dd68c;
-      --accent-fg: #062016;
-      --border: rgba(243, 241, 236, 0.12);
-      --border-strong: rgba(243, 241, 236, 0.22);
+      --bg: #0c0d0b;
+      --raised: #1d1f1a;
+      --line: #2a2b26;
+      --fg: #ecece4;
+      --muted: #9a9b90;
+      --accent: #c5d46a;
+      --accent-hover: #d3e07c;
+      --accent-fg: #12140c;
+      --accent-soft: color-mix(in oklab, var(--accent) 14%, transparent);
+      --surface: var(--raised);
+      --subtle: #6d6e66;
+      --border: var(--line);
+      --border-strong: color-mix(in oklab, var(--fg) 22%, transparent);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: Outfit, system-ui, sans-serif;
+      font-family: "Source Sans 3", system-ui, sans-serif;
       background: var(--bg);
       color: var(--fg);
       line-height: 1.55;
@@ -49,7 +53,7 @@
     header {
       position: fixed; inset: 0 0 auto 0; z-index: 30;
       border-bottom: 1px solid var(--border);
-      background: rgba(12, 13, 16, 0.7);
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
       backdrop-filter: blur(12px);
     }
     .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
